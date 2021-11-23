@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<assembly manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1">
+  <assemblyIdentity version="1.1.0.0" name="Lenovo.Modern.ImController.exe"/>
+  <!-- For some reason, mscoree looks for some crypto dlls in app folder instead of system32. This happens even if we specify defaultdllsearchpath in assembly. Only was
+        is to add loadFrom attribute in manifest file. This prevents dll highjacking attack.
+        -->
+  <file name="cryptsp.dll" loadFrom="%SystemRoot%\System32\cryptsp.dll" />
+  <file name="bcrypt.dll" loadFrom="%SystemRoot%\System32\bcrypt.dll" />
+  <file name="crypt32.dll" loadFrom="%SystemRoot%\System32\crypt32.dll" />
+  <file name="ntasn1.dll" loadFrom="%SystemRoot%\System32\ntasn1.dll" />
+  <file name="ncrypt.dll" loadFrom="%SystemRoot%\System32\ncrypt.dll" />
+  <file name="bcryptprimitives.dll" loadFrom="%SystemRoot%\System32\bcryptprimitives.dll" />
+  <file name="ncryptprov.dll" loadFrom="%SystemRoot%\System32\ncryptprov.dll" />
+</assembly>

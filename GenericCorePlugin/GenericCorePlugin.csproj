@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{BEDE79C8-F13D-492E-A4BF-79EACCBDF58A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GenericCorePlugin</RootNamespace>
+    <AssemblyName>GenericCorePlugin</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.WindowsRuntime" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Windows" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IWshRuntimeLibrary\IWshShell.cs" />
+    <Compile Include="IWshRuntimeLibrary\IWshShell2.cs" />
+    <Compile Include="IWshRuntimeLibrary\IWshShell3.cs" />
+    <Compile Include="IWshRuntimeLibrary\IWshShortcut.cs" />
+    <Compile Include="IWshRuntimeLibrary\WshShell.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\ActiveDirectory\ActiveDirectiveAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\ActiveDirectory\Constants.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppLauncher\ActivateOptions.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppLauncher\AppLauncherAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppLauncher\ApplicationActivationManager.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppLauncher\ExternalCertificateValidator.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppLauncher\IApplicationActivationManager.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppLauncher\ShortcutPathDetails.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\AppTagAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\Constants.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\ContractConstants.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\CreateListForAppTask.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\FileLoad.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\Model\CloudTagGroups.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\Model\TagGroup.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\Model\TagRule.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\Services\Output\OutputCollector.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\Services\Output\OutputWriter.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\Services\ProtocolGenerator.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\Services\Providers\LegacyApp\StartMenuAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\Services\Providers\ModernApp\AppxManifestProcessor.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\Services\Providers\ModernApp\PackageManagerAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\Services\Providers\Tags\ITagAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\Services\Providers\Tags\TagManager.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\TagAgents\CloudTags\AppXAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\TagAgents\CloudTags\CloudTagManager.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\TagAgents\CloudTags\CloudTagRegistry.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\TagAgents\CloudTags\Constants.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\TagAgents\CloudTags\FileXPathAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\TagAgents\CloudTags\ICloudTagProvider.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\TagAgents\CloudTags\LocalFileAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\TagAgents\CloudTags\PnpDeviceAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\TagAgents\CloudTags\RegistryAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\TagAgents\CloudTags\WmiPropertyAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\TagAgents\EnterpriseTagDetector.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\TagAgents\HardwareTagAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\TagAgents\ManualProgramDetectionTagAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\TagAgents\RegistryTagAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\TagAgents\SoftwareTagAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\TagAgents\SystemOsTagAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\TagAgents\UDCTagAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\AppTag\TagAgents\WindowsCloudTagDetector.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\FileSystem\DirectoryFileAccessDetector.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\FileSystem\FileLoad.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\FileSystem\FileSystemAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\FileSystem\PerformActionOnItemsAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\FileSystem\PermissionWhiteListManager.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\MachineInformation\Constants.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\MachineInformation\MachineInformationAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\MachineInformation\Services\BrandAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\MachineInformation\Services\CountryCodeAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\MachineInformation\Services\FamilyAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\MachineInformation\Services\MTMAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\MachineInformation\Services\OperatingSystemAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\MachineInformation\Services\SubBrandAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\MachineInformation\SMBiosInformation.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\MachineInformation\SMBiosInformationAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\MachineInformation\StringExtensions.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\MachineInformation\Utilities\SkuParser.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\MemoryInformation\MemoryInformationAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\PluginEntry.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\Registry\PermissionWhiteListManager.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\Registry\RegistryAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\RequestResponder.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\GenericCorePlugin\StorageInformation\StorageInformationAgent.cs" />
+    <Compile Include="Lenovo\Modern\Plugins\Generic\MemoryPlugin\Constants.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lenovo.Modern.CoreTypes.3\Lenovo.Modern.CoreTypes.3.csproj">
+      <Project>{bede79c8-f13d-492e-a4bf-79eaccbdf591}</Project>
+      <Name>Lenovo.Modern.CoreTypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lenovo.Modern.ImController.ImClient.3\Lenovo.Modern.ImController.ImClient.3.csproj">
+      <Project>{bede79c8-f13d-492e-a4bf-79eaccbdf595}</Project>
+      <Name>Lenovo.Modern.ImController.ImClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lenovo.Modern.Utilities.3\Lenovo.Modern.Utilities.3.csproj">
+      <Project>{bede79c8-f13d-492e-a4bf-79eaccbdf599}</Project>
+      <Name>Lenovo.Modern.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BEDE79C8-F13D-492E-A4BF-79EACCBDF591}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Lenovo.Modern.CoreTypes</RootNamespace>
+    <AssemblyName>Lenovo.Modern.CoreTypes</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Contracts\ActiveDirectory\AppPoliciesRequest.cs" />
+    <Compile Include="Contracts\ActiveDirectory\AppPoliciesResponse.cs" />
+    <Compile Include="Contracts\ActiveDirectory\ContractConstants.cs" />
+    <Compile Include="Contracts\ActiveDirectory\Policy.cs" />
+    <Compile Include="Contracts\ActiveDirectory\PolicyInformation.cs" />
+    <Compile Include="Contracts\ActiveDirectory\PolicyList.cs" />
+    <Compile Include="Contracts\AppLauncher\AppLaunchResponse.cs" />
+    <Compile Include="Contracts\AppLauncher\ContractConstants.cs" />
+    <Compile Include="Contracts\AppLauncher\ControlPanelItemLaunchRequest.cs" />
+    <Compile Include="Contracts\AppLauncher\DesktopAppLaunchDetails.cs" />
+    <Compile Include="Contracts\AppLauncher\DesktopAppLaunchRequest.cs" />
+    <Compile Include="Contracts\AppLauncher\DocumentLaunchDetails.cs" />
+    <Compile Include="Contracts\AppLauncher\DocumentLaunchRequest.cs" />
+    <Compile Include="Contracts\AppLauncher\Result.cs" />
+    <Compile Include="Contracts\AppLauncher\UniversalAppLaunchDetails.cs" />
+    <Compile Include="Contracts\AppLauncher\UniversalAppLaunchRequest.cs" />
+    <Compile Include="Contracts\Capabilities\CapabilityResponse\Capability.cs" />
+    <Compile Include="Contracts\Capabilities\CapabilityResponse\CapabilityResponse.cs" />
+    <Compile Include="Contracts\FileSystem\Action.cs" />
+    <Compile Include="Contracts\FileSystem\ContractConstants.cs" />
+    <Compile Include="Contracts\FileSystem\Directory.cs" />
+    <Compile Include="Contracts\FileSystem\DirectoryListingRequest.cs" />
+    <Compile Include="Contracts\FileSystem\DirectoryListingResponse.cs" />
+    <Compile Include="Contracts\FileSystem\Item.cs" />
+    <Compile Include="Contracts\FileSystem\ItemActionRequest.cs" />
+    <Compile Include="Contracts\FileSystem\ItemActionResponse.cs" />
+    <Compile Include="Contracts\ImController\App.cs" />
+    <Compile Include="Contracts\ImController\ContractConstants.cs" />
+    <Compile Include="Contracts\ImController\EntitledAppsRequest.cs" />
+    <Compile Include="Contracts\ImController\EntitledAppsResponse.cs" />
+    <Compile Include="Contracts\ImController\EntitledRequest.cs" />
+    <Compile Include="Contracts\ImController\EntitledResponse.cs" />
+    <Compile Include="Contracts\ImController\InstallPendingRequest.cs" />
+    <Compile Include="Contracts\ImController\InstallPendingResponse.cs" />
+    <Compile Include="Contracts\ImController\Package.cs" />
+    <Compile Include="Contracts\ImController\PendingUpdateRequest.cs" />
+    <Compile Include="Contracts\ImController\PendingUpdateResponse.cs" />
+    <Compile Include="Contracts\ImController\Status.cs" />
+    <Compile Include="Contracts\ImController\StatusRequest.cs" />
+    <Compile Include="Contracts\ImController\StatusResponse.cs" />
+    <Compile Include="Contracts\Messaging\Dates.cs" />
+    <Compile Include="Contracts\Messaging\LenovoMessage.cs" />
+    <Compile Include="Contracts\Messaging\MessageAction.cs" />
+    <Compile Include="Contracts\Messaging\MessageActionType.cs" />
+    <Compile Include="Contracts\Messaging\MessageContent.cs" />
+    <Compile Include="Contracts\Messaging\MessageFilter.cs" />
+    <Compile Include="Contracts\Messaging\MessageHeaderType.cs" />
+    <Compile Include="Contracts\Messaging\MessageHistory.cs" />
+    <Compile Include="Contracts\Messaging\MessageOrigin.cs" />
+    <Compile Include="Contracts\Messaging\MessagePriority.cs" />
+    <Compile Include="Contracts\Messaging\MessageTargetBrand.cs" />
+    <Compile Include="Contracts\Messaging\MessageType.cs" />
+    <Compile Include="Contracts\Messaging\NegatableBrand.cs" />
+    <Compile Include="Contracts\Messaging\NegatableKeyValuePair.cs" />
+    <Compile Include="Contracts\Messaging\NegatableString.cs" />
+    <Compile Include="Contracts\Messaging\v2\Commands\ApplicationPreference.cs" />
+    <Compile Include="Contracts\Messaging\v2\Commands\MessageQueueRequest.cs" />
+    <Compile Include="Contracts\Messaging\v2\Commands\MessageRemovalRequest.cs" />
+    <Compile Include="Contracts\Messaging\v2\Commands\MessageRequestResult.cs" />
+    <Compile Include="Contracts\Messaging\v2\Commands\MessagingPreferenceGetRequest.cs" />
+    <Compile Include="Contracts\Messaging\v2\Commands\MessagingPreferenceGetResponse.cs" />
+    <Compile Include="Contracts\Messaging\v2\Commands\MessagingPreferenceSetRequest.cs" />
+    <Compile Include="Contracts\Messaging\v2\Commands\NotificationAction.cs" />
+    <Compile Include="Contracts\Messaging\v2\Commands\NotificationInvokedDetailsRequest.cs" />
+    <Compile Include="Contracts\Messaging\v2\Commands\Result.cs" />
+    <Compile Include="Contracts\Messaging\v2\Commands\Substitution.cs" />
+    <Compile Include="Contracts\Messaging\v2\Conditions\CustomCondition.cs" />
+    <Compile Include="Contracts\Messaging\v2\Conditions\DateRangeBoundary.cs" />
+    <Compile Include="Contracts\Messaging\v2\Conditions\DynamicCondition.cs" />
+    <Compile Include="Contracts\Messaging\v2\Conditions\HistoricalCondition.cs" />
+    <Compile Include="Contracts\Messaging\v2\Conditions\HistoricalDuplicateMessages.cs" />
+    <Compile Include="Contracts\Messaging\v2\Conditions\HistoricalRepeat.cs" />
+    <Compile Include="Contracts\Messaging\v2\Conditions\IProximityBoundary.cs" />
+    <Compile Include="Contracts\Messaging\v2\Conditions\MessageCreatedProximity.cs" />
+    <Compile Include="Contracts\Messaging\v2\Conditions\MessageReceivedProximity.cs" />
+    <Compile Include="Contracts\Messaging\v2\Conditions\OobeProximity.cs" />
+    <Compile Include="Contracts\Messaging\v2\Conditions\RepeatBoundary.cs" />
+    <Compile Include="Contracts\Messaging\v2\Conditions\TimeBoundaryCondition.cs" />
+    <Compile Include="Contracts\Messaging\v2\ContractConstants.cs" />
+    <Compile Include="Contracts\Messaging\v2\Delivery\DeliveryResources.cs" />
+    <Compile Include="Contracts\Messaging\v2\Delivery\DesktopPopup.cs" />
+    <Compile Include="Contracts\Messaging\v2\Delivery\DesktopPopupGenericTemplate.cs" />
+    <Compile Include="Contracts\Messaging\v2\Delivery\MessageDelivery.cs" />
+    <Compile Include="Contracts\Messaging\v2\Delivery\Option.cs" />
+    <Compile Include="Contracts\Messaging\v2\Delivery\TextResource.cs" />
+    <Compile Include="Contracts\Messaging\v2\Delivery\VisualizationOptions.cs" />
+    <Compile Include="Contracts\Messaging\v2\Delivery\WindowsToast.cs" />
+    <Compile Include="Contracts\Messaging\v2\Message.cs" />
+    <Compile Include="Contracts\Messaging\v2\MessageConditions.cs" />
+    <Compile Include="Contracts\Messaging\v2\MessageDigest.cs" />
+    <Compile Include="Contracts\Messaging\v2\MessageDigestInformation.cs" />
+    <Compile Include="Contracts\Messaging\v2\MessageInformation.cs" />
+    <Compile Include="Contracts\Messaging\v2\Preferences\CategoryGetPreference.cs" />
+    <Compile Include="Contracts\Messaging\v2\Preferences\CategorySetPreference.cs" />
+    <Compile Include="Contracts\Messaging\v2\Preferences\Preference.cs" />
+    <Compile Include="Contracts\MetricPreferences\AllAppsMetricCollectionSettingResponse.cs" />
+    <Compile Include="Contracts\MetricPreferences\App.cs" />
+    <Compile Include="Contracts\MetricPreferences\AppIdentifier.cs" />
+    <Compile Include="Contracts\MetricPreferences\AppList.cs" />
+    <Compile Include="Contracts\MetricPreferences\AppMetricCollectionResponse.cs" />
+    <Compile Include="Contracts\MetricPreferences\AppMetricCollectionSettingRequest.cs" />
+    <Compile Include="Contracts\MetricPreferences\Confirmation.cs" />
+    <Compile Include="Contracts\MetricPreferences\Description.cs" />
+    <Compile Include="Contracts\MetricPreferences\LenovoAppMetricsModels\App.cs" />
+    <Compile Include="Contracts\MetricPreferences\LenovoAppMetricsModels\AppList.cs" />
+    <Compile Include="Contracts\MetricPreferences\LenovoAppMetricsModels\InstallationCheck.cs" />
+    <Compile Include="Contracts\MetricPreferences\LenovoAppMetricsModels\LaunchPath.cs" />
+    <Compile Include="Contracts\MetricPreferences\LenovoAppMetricsModels\LenovoAppMetrics.cs" />
+    <Compile Include="Contracts\MetricPreferences\LenovoAppMetricsModels\Location.cs" />
+    <Compile Include="Contracts\MetricPreferences\LenovoAppMetricsModels\MetricSetting.cs" />
+    <Compile Include="Contracts\MetricPreferences\LenovoAppMetricsModels\OffValue.cs" />
+    <Compile Include="Contracts\MetricPreferences\LenovoAppMetricsModels\OnValue.cs" />
+    <Compile Include="Contracts\MetricPreferences\MetricContractConstants.cs" />
+    <Compile Include="Contracts\MetricPreferences\MetricPreferenceResponse.cs" />
+    <Compile Include="Contracts\Registry\ContractConstants.cs" />
+    <Compile Include="Contracts\Registry\Key.cs" />
+    <Compile Include="Contracts\Registry\KeyChild.cs" />
+    <Compile Include="Contracts\Registry\KeyChildrenRequest.cs" />
+    <Compile Include="Contracts\Registry\KeyChildrenResponse.cs" />
+    <Compile Include="Contracts\Registry\KeyList.cs" />
+    <Compile Include="Contracts\Registry\RegistryKind.cs" />
+    <Compile Include="Contracts\SystemInformation\BatteryInformation\BatteryContractConstants.cs" />
+    <Compile Include="Contracts\SystemInformation\BatteryInformation\BatteryInformation.cs" />
+    <Compile Include="Contracts\SystemInformation\BatteryInformation\BatteryInformationResponse.cs" />
+    <Compile Include="Contracts\SystemInformation\BrandType.cs" />
+    <Compile Include="Contracts\SystemInformation\ContractConstants.cs" />
+    <Compile Include="Contracts\SystemInformation\CountryCodeType.cs" />
+    <Compile Include="Contracts\SystemInformation\EnclosureType.cs" />
+    <Compile Include="Contracts\SystemInformation\MachineInformation.cs" />
+    <Compile Include="Contracts\SystemInformation\MemoryInformation\MemoryContractConstants.cs" />
+    <Compile Include="Contracts\SystemInformation\MemoryInformation\MemoryInformationRequest.cs" />
+    <Compile Include="Contracts\SystemInformation\MemoryInformation\MemoryInformationResponse.cs" />
+    <Compile Include="Contracts\SystemInformation\MemoryInformation\MemorySlot.cs" />
+    <Compile Include="Contracts\SystemInformation\MemoryInformation\SystemMemoryInformation.cs" />
+    <Compile Include="Contracts\SystemInformation\OutputLocationRequest.cs" />
+    <Compile Include="Contracts\SystemInformation\OutputLocationResponse.cs" />
+    <Compile Include="Contracts\SystemInformation\StorageInformation\LogicalDisk.cs" />
+    <Compile Include="Contracts\SystemInformation\StorageInformation\PhysicalDisk.cs" />
+    <Compile Include="Contracts\SystemInformation\StorageInformation\StorageContractConstants.cs" />
+    <Compile Include="Contracts\SystemInformation\StorageInformation\StorageInformationRequest.cs" />
+    <Compile Include="Contracts\SystemInformation\StorageInformation\StorageInformationResponse.cs" />
+    <Compile Include="Events\AppMonitor\AppEvent.cs" />
+    <Compile Include="Events\AppMonitor\AppMonitorEventConstants.cs" />
+    <Compile Include="Events\AppMonitor\AppMonitorEventReaction.cs" />
+    <Compile Include="Events\AppMonitor\AppMonitorEventSubscription.cs" />
+    <Compile Include="Events\FileSystem\FileSystemEventConstants.cs" />
+    <Compile Include="Events\FileSystem\FileSystemEventReaction.cs" />
+    <Compile Include="Events\FileSystem\FileSystemEventSubscription.cs" />
+    <Compile Include="Events\ImController\ImControllerEventConstants.cs" />
+    <Compile Include="Events\Network\NetworkEventConstants.cs" />
+    <Compile Include="Events\Network\NetworkEventReaction.cs" />
+    <Compile Include="Events\Network\NetworkEventSubscription.cs" />
+    <Compile Include="Events\Network\WlanEventConstants.cs" />
+    <Compile Include="Events\Network\WlanEventReaction.cs" />
+    <Compile Include="Events\Registry\RegistryEventConstants.cs" />
+    <Compile Include="Events\Registry\RegistryEventReaction.cs" />
+    <Compile Include="Events\Registry\RegistryEventSubscription.cs" />
+    <Compile Include="Events\SystemEvent\SystemEventConstants.cs" />
+    <Compile Include="Events\SystemEvent\SystemEventReaction.cs" />
+    <Compile Include="Events\SystemEvent\SystemEventSubscription.cs" />
+    <Compile Include="Events\TimeBased\DayOfTheWeekEnum.cs" />
+    <Compile Include="Events\TimeBased\RepeatIntervalUnitEnum.cs" />
+    <Compile Include="Events\TimeBased\TimeBasedEventConstants.cs" />
+    <Compile Include="Events\TimeBased\TimeBasedEventReaction.cs" />
+    <Compile Include="Events\TimeBased\TimeBasedEventSubscription.cs" />
+    <Compile Include="Events\UsageMonitor\UsageMonitorEventConstants.cs" />
+    <Compile Include="Events\WindowMessage\DeviceChangeEventReaction.cs" />
+    <Compile Include="Events\WindowMessage\DeviceChangeEventSubscription.cs" />
+    <Compile Include="Events\WindowMessage\PowerBroadcastEventReaction.cs" />
+    <Compile Include="Events\WindowMessage\PowerBroadcastEventSubscription.cs" />
+    <Compile Include="Events\WindowMessage\SessionChangeEventReaction.cs" />
+    <Compile Include="Events\WindowMessage\SessionChangeEventSubscription.cs" />
+    <Compile Include="Events\WindowMessage\WindowMessageEventConstants.cs" />
+    <Compile Include="Models\AppTagList\AppAndTagCollection.cs" />
+    <Compile Include="Models\AppTagList\AppsAndTagsRequest.cs" />
+    <Compile Include="Models\AppTagList\AppType.cs" />
+    <Compile Include="Models\AppTagList\InstalledApp.cs" />
+    <Compile Include="Models\AppTagList\LegacyAppInformation.cs" />
+    <Compile Include="Models\AppTagList\ModernAppInformation.cs" />
+    <Compile Include="Models\AppTagList\OutputLocationRequest.cs" />
+    <Compile Include="Models\AppTagList\OutputLocationResponse.cs" />
+    <Compile Include="Models\AppTagList\Tag.cs" />
+    <Compile Include="Models\Filter.cs" />
+    <Compile Include="Models\IAdvancedApplicabilityFilter.cs" />
+    <Compile Include="Models\IBasicEligabilityRequirements.cs" />
+    <Compile Include="Models\Subscription\AppDependency.cs" />
+    <Compile Include="Models\Subscription\AppSetting.cs" />
+    <Compile Include="Models\Subscription\AppVersion.cs" />
+    <Compile Include="Models\Subscription\FileCData.cs" />
+    <Compile Include="Models\Subscription\InstallInfo.cs" />
+    <Compile Include="Models\Subscription\ModernAppSubscription.cs" />
+    <Compile Include="Models\Subscription\MultiPackageSubscription.cs" />
+    <Compile Include="Models\Subscription\Package.cs" />
+    <Compile Include="Models\Subscription\PackageVersion.cs" />
+    <Compile Include="Models\Subscription\Setting.cs" />
+    <Compile Include="Models\Subscription\SubscriptionChannel.cs" />
+    <Compile Include="Models\Subscription\TransferInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ApplicableBindings.cs" />
+    <Compile Include="Services\EligibilityFilter.cs" />
+    <Compile Include="Services\MessageDataExtractor.cs" />
+    <Compile Include="Utilities\DataContractStringSerializer.cs" />
+    <Compile Include="Utilities\Serializer.cs" />
+    <Compile Include="Utilities\XmlStringSerializer.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

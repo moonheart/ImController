@@ -1,0 +1,63 @@
+
+csharpsquid:S101º"kRename struct 'PROCESS_INFORMATION' to match pascal case naming rules, consider using 'ProcessInformation'.(®êÄÙùÿÿÿÿ
+~csharpsquid:S101î"\Rename struct 'STARTUPINFO' to match pascal case naming rules, consider using 'Startupinfo'.(¿ğ×Óúÿÿÿÿ
+†csharpsquid:S101Ø"dRename struct 'WTS_SESSION_INFO' to match pascal case naming rules, consider using 'WtsSessionInfo'.(²íşúÿÿÿÿ
+Ucsharpsquid:S1854"8Remove this useless assignment to local variable 'zero'.(•ûı 
+Icsharpsquid:S4070¹"+Remove the 'FlagsAttribute' from this enum.(Ö—Ù²
+Scsharpsquid:S2344¹"5Rename this enumeration to remove the 'Flags' suffix.(Ö—Ù²
+‚csharpsquid:S2342Ù"_Rename this enumeration to match the regular expression: '^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$'.(Û±Õ§ùÿÿÿÿ
+}csharpsquid:S2342¡"_Rename this enumeration to match the regular expression: '^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$'.(÷ÎÛ
+‚csharpsquid:S2342Ê"_Rename this enumeration to match the regular expression: '^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$'.(Ù²ÌĞüÿÿÿÿ
+‚csharpsquid:S2342×"_Rename this enumeration to match the regular expression: '^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$'.(íÂ±Çıÿÿÿÿ
+‚csharpsquid:S2342¨"_Rename this enumeration to match the regular expression: '^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$'.(ŸÿŒçşÿÿÿÿ
+‚csharpsquid:S2342±"_Rename this enumeration to match the regular expression: '^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$'.(ÄÃøÿÿÿÿ
+gcsharpsquid:S1104½"DMake this field 'private' and encapsulate it in a 'public' property.(ŸÙºáÿÿÿÿÿ
+gcsharpsquid:S1104À"DMake this field 'private' and encapsulate it in a 'public' property.(ğëëÀùÿÿÿÿ
+bcsharpsquid:S1104Ã"DMake this field 'private' and encapsulate it in a 'public' property.(ÜØéÄ
+gcsharpsquid:S1104Æ"DMake this field 'private' and encapsulate it in a 'public' property.(¿˜°¨şÿÿÿÿ
+bcsharpsquid:S1104ñ"DMake this field 'private' and encapsulate it in a 'public' property.(ÑØ·ú
+bcsharpsquid:S1104ô"DMake this field 'private' and encapsulate it in a 'public' property.(ïŠó½
+bcsharpsquid:S1104÷"DMake this field 'private' and encapsulate it in a 'public' property.(å±»©
+bcsharpsquid:S1104ú"DMake this field 'private' and encapsulate it in a 'public' property.(®í·¡
+bcsharpsquid:S1104ı"DMake this field 'private' and encapsulate it in a 'public' property.(ÓÙÄÊ
+gcsharpsquid:S1104€"DMake this field 'private' and encapsulate it in a 'public' property.(Š—¬Ãøÿÿÿÿ
+bcsharpsquid:S1104ƒ"DMake this field 'private' and encapsulate it in a 'public' property.(§íúí
+acsharpsquid:S1104†"DMake this field 'private' and encapsulate it in a 'public' property.(É˜ì
+gcsharpsquid:S1104‰"DMake this field 'private' and encapsulate it in a 'public' property.(™œ¿ªüÿÿÿÿ
+bcsharpsquid:S1104Œ"DMake this field 'private' and encapsulate it in a 'public' property.(ú©’»
+gcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(°Â¥ÿÿÿÿÿ
+bcsharpsquid:S1104’"DMake this field 'private' and encapsulate it in a 'public' property.(‰´æŸ
+gcsharpsquid:S1104•"DMake this field 'private' and encapsulate it in a 'public' property.(ƒ‡ûéøÿÿÿÿ
+acsharpsquid:S1104˜"DMake this field 'private' and encapsulate it in a 'public' property.(‚¾â[
+bcsharpsquid:S1104›"DMake this field 'private' and encapsulate it in a 'public' property.(–½è
+bcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(½æ­Œ
+gcsharpsquid:S1104¡"DMake this field 'private' and encapsulate it in a 'public' property.(æ¼ùÿÿÿÿ
+bcsharpsquid:S1104¤"DMake this field 'private' and encapsulate it in a 'public' property.(Ì»Ôë
+Xcsharpsquid:S4200"6Make this native method private and provide a wrapper.(ü’Ö¥ûÿÿÿÿ
+Xcsharpsquid:S4200"6Make this native method private and provide a wrapper.(·¥ëËÿÿÿÿÿ
+Xcsharpsquid:S4200"6Make this native method private and provide a wrapper.(ã“ªüÿÿÿÿ
+Rcsharpsquid:S4200"6Make this native method private and provide a wrapper.(âğº_
+Scsharpsquid:S4200#"6Make this native method private and provide a wrapper.(òà…
+Scsharpsquid:S4200("6Make this native method private and provide a wrapper.(ÇıÀ­
+Xcsharpsquid:S4200."6Make this native method private and provide a wrapper.(ø±¼•úÿÿÿÿ
+Xcsharpsquid:S42003"6Make this native method private and provide a wrapper.(ç³«Ûúÿÿÿÿ
+Scsharpsquid:S42008"6Make this native method private and provide a wrapper.(Ö€Å
+Xcsharpsquid:S4200="6Make this native method private and provide a wrapper.(Ö“ÓŞÿÿÿÿÿ
+Xcsharpsquid:S4200B"6Make this native method private and provide a wrapper.(ßÏãîüÿÿÿÿ
+Scsharpsquid:S4200G"6Make this native method private and provide a wrapper.(åòÓ
+Xcsharpsquid:S4200L"6Make this native method private and provide a wrapper.(æëİùÿÿÿÿ
+ccsharpsquid:S4200c"AMake this wrapper for native method 'WTSOpenServer' less trivial.(ñšôŞıÿÿÿÿ
+dcsharpsquid:S4200i"BMake this wrapper for native method 'WTSCloseServer' less trivial.(Áéş÷ùÿÿÿÿ
+Rcsharpsquid:S4214"0Make this 'P/Invoke' method private or internal.(ü’Ö¥ûÿÿÿÿ
+Rcsharpsquid:S4214"0Make this 'P/Invoke' method private or internal.(·¥ëËÿÿÿÿÿ
+Rcsharpsquid:S4214"0Make this 'P/Invoke' method private or internal.(ã“ªüÿÿÿÿ
+Lcsharpsquid:S4214"0Make this 'P/Invoke' method private or internal.(âğº_
+Mcsharpsquid:S4214#"0Make this 'P/Invoke' method private or internal.(òà…
+Mcsharpsquid:S4214("0Make this 'P/Invoke' method private or internal.(ÇıÀ­
+Rcsharpsquid:S4214."0Make this 'P/Invoke' method private or internal.(ø±¼•úÿÿÿÿ
+Rcsharpsquid:S42143"0Make this 'P/Invoke' method private or internal.(ç³«Ûúÿÿÿÿ
+Mcsharpsquid:S42148"0Make this 'P/Invoke' method private or internal.(Ö€Å
+Rcsharpsquid:S4214="0Make this 'P/Invoke' method private or internal.(Ö“ÓŞÿÿÿÿÿ
+Rcsharpsquid:S4214B"0Make this 'P/Invoke' method private or internal.(ßÏãîüÿÿÿÿ
+Mcsharpsquid:S4214G"0Make this 'P/Invoke' method private or internal.(åòÓ
+Rcsharpsquid:S4214L"0Make this 'P/Invoke' method private or internal.(æëİùÿÿÿÿ

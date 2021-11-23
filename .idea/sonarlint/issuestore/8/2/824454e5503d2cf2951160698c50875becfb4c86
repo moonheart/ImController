@@ -1,0 +1,16 @@
+
+ecsharpsquid:S2486="CHandle the exception or explain in a comment why it can be ignored.(â½µøÿÿÿÿ
+ecsharpsquid:S2486O"CHandle the exception or explain in a comment why it can be ignored.(â½µøÿÿÿÿ
+lcsharpsquid:S1118"OAdd a 'protected' constructor or the 'static' keyword to the class declaration.(ÌöïÜ
+ocsharpsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(ÙæÈé
+Jcsharpsquid:S108>")Either remove or fill this block of code.(ÒÌâ–øÿÿÿÿ
+Jcsharpsquid:S108P")Either remove or fill this block of code.(ÒÌâ–øÿÿÿÿ
+Jcsharpsquid:S108v")Either remove or fill this block of code.(ÒÌâ–øÿÿÿÿ
+Kcsharpsquid:S108‡")Either remove or fill this block of code.(ÒÌâ–øÿÿÿÿ
+Kcsharpsquid:S108Š")Either remove or fill this block of code.(ÒÌâ–øÿÿÿÿ
+Kcsharpsquid:S108")Either remove or fill this block of code.(ÒÌâ–øÿÿÿÿ
+Kcsharpsquid:S108")Either remove or fill this block of code.(ÒÌâ–øÿÿÿÿ
+\csharpsquid:S1075"?Refactor your code not to use hardcoded absolute paths or URIs.(¢ˆØØ
+\csharpsquid:S1075"?Refactor your code not to use hardcoded absolute paths or URIs.(›è‚’
+\csharpsquid:S1075"?Refactor your code not to use hardcoded absolute paths or URIs.(Œ¥“›
+acsharpsquid:S1075"?Refactor your code not to use hardcoded absolute paths or URIs.(Úö‰üÿÿÿÿ

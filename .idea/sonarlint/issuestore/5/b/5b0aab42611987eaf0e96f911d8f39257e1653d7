@@ -1,0 +1,19 @@
+
+fcsharpsquid:S2589"DChange this condition so that it does not always evaluate to 'true'.(¹±Œäûÿÿÿÿ
+fcsharpsquid:S2589X"DChange this condition so that it does not always evaluate to 'true'.(¹±Œäûÿÿÿÿ
+ecsharpsquid:S2486d"CHandle the exception or explain in a comment why it can be ignored.(â½µøÿÿÿÿ
+~csharpsquid:S101–"bRename struct 'PROCESSENTRY32' to match pascal case naming rules, consider using 'Processentry32'.(×°ğc
+Jcsharpsquid:S108e")Either remove or fill this block of code.(ÒÌâ–øÿÿÿÿ
+>csharpsquid:S1116I"Remove this empty statement.(¸¶×óøÿÿÿÿ
+Scsharpsquid:S2344"5Rename this enumeration to remove the 'Flags' suffix.(ÔØš 
+;csharpsquid:S907D"Remove this use of 'goto'.(‰ªèÉûÿÿÿÿ
+Xcsharpsquid:S3459Ÿ":Remove unassigned field 'th32ProcessID', or set its value.(¯“ÂÄ
+^csharpsquid:S3459«"@Remove unassigned field 'th32ParentProcessID', or set its value.(»ıËâ
+Scsharpsquid:S1144}"6Remove the unused private field 'ERROR_NO_MORE_FILES'.(Ú×¶º
+Icsharpsquid:S1144œ"+Remove the unused private field 'cntUsage'.(×”ç‡
+Wcsharpsquid:S1144¢"4Remove the unused private field 'th32DefaultHeapID'.(ô—ÅÂùÿÿÿÿ
+Rcsharpsquid:S1144¥"/Remove the unused private field 'th32ModuleID'.(‰¢½øÿÿÿÿ
+Pcsharpsquid:S1144¨"-Remove the unused private field 'cntThreads'.(Î¦èÛşÿÿÿÿ
+Tcsharpsquid:S1144®"1Remove the unused private field 'pcPriClassBase'.(µõáúÿÿÿÿ
+Hcsharpsquid:S1144±"*Remove the unused private field 'dwFlags'.(‰´æŸ
+ycsharpsquid:S4487™"VRemove this unread private class field 'dwSize' or refactor the code to use its value.(îÆÈƒıÿÿÿÿ

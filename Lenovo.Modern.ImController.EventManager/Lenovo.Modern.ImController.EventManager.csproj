@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BEDE79C8-F13D-492E-A4BF-79EACCBDF593}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Lenovo.Modern.ImController.EventManager</RootNamespace>
+    <AssemblyName>Lenovo.Modern.ImController.EventManager</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Win32.TaskScheduler">
+      <HintPath>C:\Windows\Lenovo\ImController\Service\Microsoft.Win32.TaskScheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EventManagerFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\EventGeneratorDelegate.cs" />
+    <Compile Include="Services\EventManager.cs" />
+    <Compile Include="Services\EventManagerException.cs" />
+    <Compile Include="Services\EventMonitors\AppMonitor\AppMonitorMonitor.cs" />
+    <Compile Include="Services\EventMonitors\EventMonitorBase.cs" />
+    <Compile Include="Services\EventMonitors\EventSubscriptionMapping.cs" />
+    <Compile Include="Services\EventMonitors\FilesSystem\FileSystemEventMonitor.cs" />
+    <Compile Include="Services\EventMonitors\FilesSystem\FileSystemMonitorConstants.cs" />
+    <Compile Include="Services\EventMonitors\ImController\ImControllerEventConstants.cs" />
+    <Compile Include="Services\EventMonitors\ImController\ImControllerServiceEventMonitor.cs" />
+    <Compile Include="Services\EventMonitors\Network\NetworkMonitor.cs" />
+    <Compile Include="Services\EventMonitors\Network\NetworkMonitorConstants.cs" />
+    <Compile Include="Services\EventMonitors\Network\WlanMonitor.cs" />
+    <Compile Include="Services\EventMonitors\Network\WlanMonitorConstants.cs" />
+    <Compile Include="Services\EventMonitors\Registry\RegistryMonitor.cs" />
+    <Compile Include="Services\EventMonitors\Registry\RegistryMonitorConstants.cs" />
+    <Compile Include="Services\EventMonitors\Registry\Win32.cs" />
+    <Compile Include="Services\EventMonitors\SystemEvent\SystemEventMonitor.cs" />
+    <Compile Include="Services\EventMonitors\SystemEvent\SystemEventMonitorConstants.cs" />
+    <Compile Include="Services\EventMonitors\TimeBased\TimeBasedMonitor.cs" />
+    <Compile Include="Services\EventMonitors\UsageMonitor\AppUsageMonitor\AppUsageMonitor.cs" />
+    <Compile Include="Services\EventMonitors\UsageMonitor\AppUsageMonitor\AppUsageRecord.cs" />
+    <Compile Include="Services\EventMonitors\UsageMonitor\AppUsageMonitor\ChildWorkerThread.cs" />
+    <Compile Include="Services\EventMonitors\UsageMonitor\UsageMonitor.cs" />
+    <Compile Include="Services\EventMonitors\WindowMessage\WindowMessageMonitor.cs" />
+    <Compile Include="Services\EventMonitors\WindowMessage\WindowMessageMonitorConstants.cs" />
+    <Compile Include="Services\EventPriority.cs" />
+    <Compile Include="Services\EventReactionSender.cs" />
+    <Compile Include="Services\HardcodedEventPrioritizer.cs" />
+    <Compile Include="Services\IEventMonitor.cs" />
+    <Compile Include="Services\IEventPrioritizer.cs" />
+    <Compile Include="Services\IEventReactionSender.cs" />
+    <Compile Include="Services\ServiceControlHandlerDelegate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lenovo.Modern.CoreTypes.3\Lenovo.Modern.CoreTypes.3.csproj">
+      <Project>{bede79c8-f13d-492e-a4bf-79eaccbdf591}</Project>
+      <Name>Lenovo.Modern.CoreTypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lenovo.Modern.ImController.ImClient.3\Lenovo.Modern.ImController.ImClient.3.csproj">
+      <Project>{bede79c8-f13d-492e-a4bf-79eaccbdf595}</Project>
+      <Name>Lenovo.Modern.ImController.ImClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lenovo.Modern.ImController.PluginManager\Lenovo.Modern.ImController.PluginManager.csproj">
+      <Project>{bede79c8-f13d-492e-a4bf-79eaccbdf596}</Project>
+      <Name>Lenovo.Modern.ImController.PluginManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lenovo.Modern.ImController.Shared.2\Lenovo.Modern.ImController.Shared.2.csproj">
+      <Project>{bede79c8-f13d-492e-a4bf-79eaccbdf597}</Project>
+      <Name>Lenovo.Modern.ImController.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lenovo.Modern.Utilities.3\Lenovo.Modern.Utilities.3.csproj">
+      <Project>{bede79c8-f13d-492e-a4bf-79eaccbdf599}</Project>
+      <Name>Lenovo.Modern.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

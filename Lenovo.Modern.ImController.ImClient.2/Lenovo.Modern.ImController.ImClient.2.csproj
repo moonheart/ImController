@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BEDE79C8-F13D-492E-A4BF-79EACCBDF581}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Lenovo.Modern.ImController.ImClient</RootNamespace>
+    <AssemblyName>Lenovo.Modern.ImController.ImClient</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interop\DeviceIo.cs" />
+    <Compile Include="Interop\SetupApi.cs" />
+    <Compile Include="Interop\Win32fileOp.cs" />
+    <Compile Include="Models\Bitness.cs" />
+    <Compile Include="Models\BrokerAuthentication.cs" />
+    <Compile Include="Models\BrokerRequest.cs" />
+    <Compile Include="Models\BrokerRequirements.cs" />
+    <Compile Include="Models\BrokerResponse.cs" />
+    <Compile Include="Models\BrokerResponseTask.cs" />
+    <Compile Include="Models\ContractCommandRequest.cs" />
+    <Compile Include="Models\ContractRequest.cs" />
+    <Compile Include="Models\ContractResponse.cs" />
+    <Compile Include="Models\ErrorCodes.cs" />
+    <Compile Include="Models\EventReaction.cs" />
+    <Compile Include="Models\EventResponse.cs" />
+    <Compile Include="Models\EventSubscription.cs" />
+    <Compile Include="Models\FailureData.cs" />
+    <Compile Include="Models\ImClientRequestTask.cs" />
+    <Compile Include="Models\PluginPrivilege.cs" />
+    <Compile Include="Models\PluginRequestInformation.cs" />
+    <Compile Include="Models\PluginType.cs" />
+    <Compile Include="Models\RequestTask.cs" />
+    <Compile Include="Models\RequestType.cs" />
+    <Compile Include="Models\ResponseData.cs" />
+    <Compile Include="Models\ResponseTask.cs" />
+    <Compile Include="Models\RunAs.cs" />
+    <Compile Include="Package\PackageManifestAgent.cs" />
+    <Compile Include="Plugin\CommandMapper.cs" />
+    <Compile Include="Plugin\IPlugin.cs" />
+    <Compile Include="Plugin\PluginEntryWrapper.cs" />
+    <Compile Include="Plugin\PluginManager.cs" />
+    <Compile Include="Plugin\SharedTask.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\BrokerRequestAgent.cs" />
+    <Compile Include="Services\BrokerRequestAgentException.cs" />
+    <Compile Include="Services\BrokerResponseAgent.cs" />
+    <Compile Include="Services\BrokerResponseAgentException.cs" />
+    <Compile Include="Services\IBrokerRequestAgent.cs" />
+    <Compile Include="Services\IBrokerResponseAgent.cs" />
+    <Compile Include="Services\IInterProcessRequester.cs" />
+    <Compile Include="Services\IInterProcessResponder.cs" />
+    <Compile Include="Services\RequestHandlerDelegate.cs" />
+    <Compile Include="Services\Umdf\DeviceDriver.cs" />
+    <Compile Include="Services\Umdf\DeviceDriverAgent.cs" />
+    <Compile Include="Services\Umdf\DeviceDriverMissingException.cs" />
+    <Compile Include="Services\Umdf\DeviceWatcher.cs" />
+    <Compile Include="Services\Umdf\ImDriverConstants.cs" />
+    <Compile Include="Services\Umdf\OnDeviceRemovalDelegate.cs" />
+    <Compile Include="Services\Umdf\UmdfControlCodes.cs" />
+    <Compile Include="Services\Umdf\UmdfDriverData.cs" />
+    <Compile Include="Utilities\ExternalLogger.cs" />
+    <Compile Include="Utilities\ExternalSignatureValidator.cs" />
+    <Compile Include="Utilities\ProcessPrivilegeDetector.cs" />
+    <Compile Include="Utilities\Serializer.cs" />
+    <Compile Include="Utilities\XmlStringSerializer.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

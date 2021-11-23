@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BEDE79C8-F13D-492E-A4BF-79EACCBDF57F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Lenovo.ImController.EventLogging</RootNamespace>
+    <AssemblyName>Lenovo.ImController.EventLogging</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="KnownConstants.cs" />
+    <Compile Include="Model\DataClassification.cs" />
+    <Compile Include="Model\StorableEvent.cs" />
+    <Compile Include="Model\StorableEventVariable.cs" />
+    <Compile Include="Model\UserEvent.cs" />
+    <Compile Include="Model\UserEventVariable.cs" />
+    <Compile Include="PrivateConstants.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicConstants.cs" />
+    <Compile Include="Services\EventChannelFactory.cs" />
+    <Compile Include="Services\Provider\EventSource.cs" />
+    <Compile Include="Services\Provider\TelemetryEventProvider.cs" />
+    <Compile Include="Services\Repositories\EventRepositoryException.cs" />
+    <Compile Include="Services\Repositories\Event\EventLogItem.cs" />
+    <Compile Include="Services\Repositories\Event\WindowsEventLogRepository.cs" />
+    <Compile Include="Services\Repositories\IEventRepository.cs" />
+    <Compile Include="Services\Repositories\IReadableEventRepository.cs" />
+    <Compile Include="Services\Repositories\IWriteableEventRepository.cs" />
+    <Compile Include="Services\TelemetryLogger.cs" />
+    <Compile Include="Utilities\DataContractStringSerializer.cs" />
+    <Compile Include="Utilities\Serializer.cs" />
+    <Compile Include="Utilities\UserAgent.cs" />
+    <Compile Include="Utilities\XmlStringSerializer.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

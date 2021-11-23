@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BEDE79C8-F13D-492E-A4BF-79EACCBDF597}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Lenovo.Modern</RootNamespace>
+    <AssemblyName>Lenovo.Modern.ImController.Shared</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Windows" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ImController\Shared\Constants.cs" />
+    <Compile Include="ImController\Shared\Model\CacheInformation.cs" />
+    <Compile Include="ImController\Shared\Model\Packages\ContractMapping.cs" />
+    <Compile Include="ImController\Shared\Model\Packages\Package.cs" />
+    <Compile Include="ImController\Shared\Model\Packages\PackageInformation.cs" />
+    <Compile Include="ImController\Shared\Model\Packages\PackageType.cs" />
+    <Compile Include="ImController\Shared\Model\Packages\SubscribedEvent.cs" />
+    <Compile Include="ImController\Shared\Model\PluginInfo.cs" />
+    <Compile Include="ImController\Shared\Model\Plugin\PluginManifest.cs" />
+    <Compile Include="ImController\Shared\Model\Subscription\PackageSubscription.cs" />
+    <Compile Include="ImController\Shared\Model\Subscription\ServiceSubscription.cs" />
+    <Compile Include="ImController\Shared\Model\Subscription\Setting.cs" />
+    <Compile Include="ImController\Shared\Services\Contracts\SystemInformation\AppTag\AppAndTagManager.cs" />
+    <Compile Include="ImController\Shared\Services\Contracts\SystemInformation\AppTag\IAppAndTagManager.cs" />
+    <Compile Include="ImController\Shared\Services\EventHandlerReason.cs" />
+    <Compile Include="ImController\Shared\Services\FilesystemPermissionEnforcer.cs" />
+    <Compile Include="ImController\Shared\Services\IDataCleanup.cs" />
+    <Compile Include="ImController\Shared\Services\IMachineInformationManager.cs" />
+    <Compile Include="ImController\Shared\Services\Impersonateuser.cs" />
+    <Compile Include="ImController\Shared\Services\InstallationLocator.cs" />
+    <Compile Include="ImController\Shared\Services\InstallMethod.cs" />
+    <Compile Include="ImController\Shared\Services\IPackageHistory.cs" />
+    <Compile Include="ImController\Shared\Services\IPluginManager.cs" />
+    <Compile Include="ImController\Shared\Services\IPluginRepository.cs" />
+    <Compile Include="ImController\Shared\Services\IServiceEventHandler.cs" />
+    <Compile Include="ImController\Shared\Services\ISubscriptionManager.cs" />
+    <Compile Include="ImController\Shared\Services\MachineInformationManager.cs" />
+    <Compile Include="ImController\Shared\Services\MsSignability.cs" />
+    <Compile Include="ImController\Shared\Services\PackageHistory.cs" />
+    <Compile Include="ImController\Shared\Services\PackageInstaller.cs" />
+    <Compile Include="ImController\Shared\Services\PackageSettingsAgent.cs" />
+    <Compile Include="ImController\Shared\Services\PluginRepository.cs" />
+    <Compile Include="ImController\Shared\Services\PluginRepositoryException.cs" />
+    <Compile Include="ImController\Shared\Services\PluginSettingsAgent.cs" />
+    <Compile Include="ImController\Shared\Services\ServiceEventBroker.cs" />
+    <Compile Include="ImController\Shared\Services\SessionTracker.cs" />
+    <Compile Include="ImController\Shared\Services\SubscribedPackageManager.cs" />
+    <Compile Include="ImController\Shared\Services\SubscriptionManager.cs" />
+    <Compile Include="ImController\Shared\Services\SubscriptionManagerException.cs" />
+    <Compile Include="ImController\Shared\Services\SubscriptionSettingsAgent.cs" />
+    <Compile Include="ImController\Shared\Services\UapInstallMonitor.cs" />
+    <Compile Include="ImController\Shared\Telemetry\EventFactory.cs" />
+    <Compile Include="ImController\Shared\Telemetry\EventLogger.cs" />
+    <Compile Include="ImController\Shared\Telemetry\ImcEvent.cs" />
+    <Compile Include="ImController\Shared\Utilities\BrokerResponseFactory.cs" />
+    <Compile Include="ImController\Shared\Utilities\CacheBuster.cs" />
+    <Compile Include="ImController\Shared\Utilities\ErrorCodes.cs" />
+    <Compile Include="ImController\Shared\Utilities\ImcPolicy.cs" />
+    <Compile Include="ImController\Shared\Utilities\Interop\Mutex.cs" />
+    <Compile Include="ImController\Shared\Utilities\Ipc\CriticalErrorDelegate.cs" />
+    <Compile Include="ImController\Shared\Utilities\Ipc\NamedPipeClient.cs" />
+    <Compile Include="ImController\Shared\Utilities\Ipc\NamedPipeException.cs" />
+    <Compile Include="ImController\Shared\Utilities\Ipc\NamedPipeServer.cs" />
+    <Compile Include="ImController\Shared\Utilities\Ipc\SafeTokenHandle.cs" />
+    <Compile Include="ImController\Shared\Utilities\Ipc\ServerMessageDelegate.cs" />
+    <Compile Include="ImController\Shared\Utilities\Ipc\Win32.cs" />
+    <Compile Include="ImController\Shared\Utilities\PackageExtractor.cs" />
+    <Compile Include="ImController\Shared\Utilities\SubscriptionSerializer.cs" />
+    <Compile Include="ImController\Shared\Utilities\UserUtility.cs" />
+    <Compile Include="ImController\Shared\Utilities\Utility.cs" />
+    <Compile Include="ImController\Shared\Utilities\Validation\IPackageVerifier.cs" />
+    <Compile Include="ImController\Shared\Utilities\Validation\IPluginVerifier.cs" />
+    <Compile Include="ImController\Shared\Utilities\Validation\PackageVerifier.cs" />
+    <Compile Include="ImController\Shared\Utilities\Validation\PluginVerifier.cs" />
+    <Compile Include="ImController\Shared\Utilities\VantageUtility.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\Services\Validation\IImcCertificateValidator.cs" />
+    <Compile Include="Utilities\Services\Validation\ImcCertificateValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lenovo.CertificateValidation.2\Lenovo.CertificateValidation.2.csproj">
+      <Project>{bede79c8-f13d-492e-a4bf-79eaccbdf58f}</Project>
+      <Name>Lenovo.CertificateValidation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lenovo.ImController.EventLogging\Lenovo.ImController.EventLogging.csproj">
+      <Project>{bede79c8-f13d-492e-a4bf-79eaccbdf590}</Project>
+      <Name>Lenovo.ImController.EventLogging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lenovo.Modern.CoreTypes.3\Lenovo.Modern.CoreTypes.3.csproj">
+      <Project>{bede79c8-f13d-492e-a4bf-79eaccbdf591}</Project>
+      <Name>Lenovo.Modern.CoreTypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lenovo.Modern.ImController.ImClient.3\Lenovo.Modern.ImController.ImClient.3.csproj">
+      <Project>{bede79c8-f13d-492e-a4bf-79eaccbdf595}</Project>
+      <Name>Lenovo.Modern.ImController.ImClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lenovo.Modern.Utilities.3\Lenovo.Modern.Utilities.3.csproj">
+      <Project>{bede79c8-f13d-492e-a4bf-79eaccbdf599}</Project>
+      <Name>Lenovo.Modern.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

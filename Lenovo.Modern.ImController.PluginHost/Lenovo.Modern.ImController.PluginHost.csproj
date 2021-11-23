@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{BEDE79C8-F13D-492E-A4BF-79EACCBDF584}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Lenovo.Modern.ImController.PluginHost</RootNamespace>
+    <AssemblyName>Lenovo.Modern.ImController.PluginHost</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject>Lenovo.Modern.ImController.PluginHost.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\HostRunner.cs" />
+    <Compile Include="Services\IInstanceEnforcer.cs" />
+    <Compile Include="Services\IIpcResponder.cs" />
+    <Compile Include="Services\InstanceEnforcer.cs" />
+    <Compile Include="Services\IRequestProcessor.cs" />
+    <Compile Include="Services\NamedPipeResponder.cs" />
+    <Compile Include="Services\PluginManagers\DomainedPlugin.cs" />
+    <Compile Include="Services\PluginManagers\PluginDomainManager.cs" />
+    <Compile Include="Services\RequestCounter.cs" />
+    <Compile Include="Services\RequestProcessor.cs" />
+    <Compile Include="Utilities\InputArguments.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lenovo.Modern.ImController.ImClient.3\Lenovo.Modern.ImController.ImClient.3.csproj">
+      <Project>{bede79c8-f13d-492e-a4bf-79eaccbdf595}</Project>
+      <Name>Lenovo.Modern.ImController.ImClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lenovo.Modern.ImController.PluginHost.AppDomain\Lenovo.Modern.ImController.PluginHost.AppDomain.csproj">
+      <Project>{bede79c8-f13d-492e-a4bf-79eaccbdf582}</Project>
+      <Name>Lenovo.Modern.ImController.PluginHost.AppDomain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lenovo.Modern.ImController.Shared.2\Lenovo.Modern.ImController.Shared.2.csproj">
+      <Project>{bede79c8-f13d-492e-a4bf-79eaccbdf597}</Project>
+      <Name>Lenovo.Modern.ImController.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lenovo.Modern.Utilities.3\Lenovo.Modern.Utilities.3.csproj">
+      <Project>{bede79c8-f13d-492e-a4bf-79eaccbdf599}</Project>
+      <Name>Lenovo.Modern.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

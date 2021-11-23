@@ -1,0 +1,16 @@
+﻿using System;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+namespace NETWORKLIST
+{
+	// Token: 0x02000040 RID: 64
+	[CompilerGenerated]
+	[Guid("DCB00000-570F-4A9B-8D69-199FDBA5723B")]
+	[CoClass(typeof(object))]
+	[TypeIdentifier]
+	[ComImport]
+	public interface NetworkListManager : INetworkListManager, INetworkEvents_Event
+	{
+	}
+}

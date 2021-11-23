@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BEDE79C8-F13D-492E-A4BF-79EACCBDF58F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Lenovo</RootNamespace>
+    <AssemblyName>Lenovo.CertificateValidation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\Windows\Lenovo\ImController\PluginHost\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureBlackbox">
+      <HintPath>C:\Windows\Lenovo\ImController\PluginHost\SecureBlackbox.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureBlackbox.HTTP">
+      <HintPath>C:\Windows\Lenovo\ImController\PluginHost\SecureBlackbox.HTTP.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureBlackbox.LDAP">
+      <HintPath>C:\Windows\Lenovo\ImController\PluginHost\SecureBlackbox.LDAP.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureBlackbox.XML">
+      <HintPath>C:\Windows\Lenovo\ImController\PluginHost\SecureBlackbox.XML.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureBlackbox.XMLSecurity">
+      <HintPath>C:\Windows\Lenovo\ImController\PluginHost\SecureBlackbox.XMLSecurity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CertificateValidation\AdditionalThumbFile.cs" />
+    <Compile Include="CertificateValidation\AsyncResult.cs" />
+    <Compile Include="CertificateValidation\CertificateTools.cs" />
+    <Compile Include="CertificateValidation\CVException.cs" />
+    <Compile Include="CertificateValidation\DebugInfo.cs" />
+    <Compile Include="CertificateValidation\FileValidator.cs" />
+    <Compile Include="CertificateValidation\JSONFileValidator.cs" />
+    <Compile Include="CertificateValidation\LenovoInterCA.cs" />
+    <Compile Include="CertificateValidation\Lenovo_CertificateValidation.cs" />
+    <Compile Include="CertificateValidation\ProcessTool.cs" />
+    <Compile Include="CertificateValidation\RSATools.cs" />
+    <Compile Include="CertificateValidation\TOKEN_ELEVATION.cs" />
+    <Compile Include="CertificateValidation\TOKEN_INFORMATION_CLASS.cs" />
+    <Compile Include="CertificateValidation\TrustStatus.cs" />
+    <Compile Include="CertificateValidation\WinVerifyTrustTools.cs" />
+    <Compile Include="CertificateValidation\XMLFileValidator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\Logging\ILogger.cs" />
+    <Compile Include="Tools\Logging\Logger.cs" />
+    <Compile Include="Tools\Logging\TextFileLogger.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CertificateValidation\Lenovo\CertificateValidation.resources" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

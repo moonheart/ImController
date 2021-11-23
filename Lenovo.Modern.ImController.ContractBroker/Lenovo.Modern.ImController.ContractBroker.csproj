@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BEDE79C8-F13D-492E-A4BF-79EACCBDF592}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Lenovo.Modern.ImController.ContractBroker</RootNamespace>
+    <AssemblyName>Lenovo.Modern.ImController.ContractBroker</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClientBrokerAgent.Net">
+      <HintPath>C:\Windows\Lenovo\ImController\Service\ClientBrokerAgent.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="ContractBrokerFactory.cs" />
+    <Compile Include="EntitledAppsRequest.cs" />
+    <Compile Include="EntitledAppsResponse.cs" />
+    <Compile Include="EntitledRequest.cs" />
+    <Compile Include="EntitledResponse.cs" />
+    <Compile Include="ImController\ContractBroker\TestContractBroker.cs" />
+    <Compile Include="NETWORKLIST\INetworkEvents.cs" />
+    <Compile Include="NETWORKLIST\INetworkEvents_Event.cs" />
+    <Compile Include="NETWORKLIST\INetworkListManager.cs" />
+    <Compile Include="NETWORKLIST\NetworkListManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CBAWrapper.cs" />
+    <Compile Include="Services\ContractBroker.cs" />
+    <Compile Include="Services\ImcContractHandler.cs" />
+    <Compile Include="Services\IRequestMapper.cs" />
+    <Compile Include="Services\RequestMapper.cs" />
+    <Compile Include="Services\RequestMapperException.cs" />
+    <Compile Include="UDCEntitldeAppsResponse.cs" />
+    <Compile Include="UDCEntitledApp.cs" />
+    <Compile Include="UDCEntitledRequest.cs" />
+    <Compile Include="UDCEntitledResponse.cs" />
+    <Compile Include="UDCSwModules.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lenovo.Modern.CoreTypes.3\Lenovo.Modern.CoreTypes.3.csproj">
+      <Project>{bede79c8-f13d-492e-a4bf-79eaccbdf591}</Project>
+      <Name>Lenovo.Modern.CoreTypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lenovo.Modern.ImController.ImClient.3\Lenovo.Modern.ImController.ImClient.3.csproj">
+      <Project>{bede79c8-f13d-492e-a4bf-79eaccbdf595}</Project>
+      <Name>Lenovo.Modern.ImController.ImClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lenovo.Modern.ImController.PluginManager\Lenovo.Modern.ImController.PluginManager.csproj">
+      <Project>{bede79c8-f13d-492e-a4bf-79eaccbdf596}</Project>
+      <Name>Lenovo.Modern.ImController.PluginManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lenovo.Modern.ImController.Shared.2\Lenovo.Modern.ImController.Shared.2.csproj">
+      <Project>{bede79c8-f13d-492e-a4bf-79eaccbdf597}</Project>
+      <Name>Lenovo.Modern.ImController.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lenovo.Modern.Utilities.3\Lenovo.Modern.Utilities.3.csproj">
+      <Project>{bede79c8-f13d-492e-a4bf-79eaccbdf599}</Project>
+      <Name>Lenovo.Modern.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
